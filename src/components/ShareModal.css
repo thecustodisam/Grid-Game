@@ -1,0 +1,133 @@
+.share-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.share-modal {
+  background: #2a2a2a;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.share-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.share-header h2 {
+  margin: 0;
+  color: #667eea;
+  font-size: 1.6rem;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+.share-content {
+  padding: 30px;
+}
+
+.share-preview {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.share-preview pre {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #fff;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.share-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.share-btn {
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.copy-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.copy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.twitter-btn {
+  background: #1DA1F2;
+  color: white;
+}
+
+.twitter-btn:hover {
+  background: #1a8cd8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(29, 161, 242, 0.3);
+}
+
+.twitter-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .share-header,
+  .share-content {
+    padding: 20px;
+  }
+
+  .share-preview {
+    padding: 16px;
+  }
+
+  .share-preview pre {
+    font-size: 0.85rem;
+  }
+}

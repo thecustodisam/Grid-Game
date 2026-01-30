@@ -1,0 +1,73 @@
+.league-selector {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.league-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.league-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #888;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.league-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+.league-btn.active {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+  border-color: #667eea;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.league-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.league-icon {
+  font-size: 2rem;
+}
+
+.league-name {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .league-buttons {
+    flex-direction: column;
+  }
+
+  .league-btn {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .league-icon {
+    font-size: 1.5rem;
+  }
+
+  .league-name {
+    font-size: 1rem;
+  }
+}
