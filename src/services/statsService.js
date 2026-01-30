@@ -185,7 +185,7 @@ export function getRecentResults(limit = 7) {
  */
 export function generateShareText(date, score, answers, league = 'NBA') {
   const lines = []
-  lines.push(`${league} Top Shot Immaculate Grid ${date}`)
+  lines.push(`Chain to the Rim - ${league} ${date}`)
   lines.push(`${score}/9 ✅`)
   lines.push('')
 
