@@ -155,7 +155,7 @@ function App() {
     <div className="app">
       <header className="header">
         <img src="/chaintotherim2.png" alt="Chain to the Rim" className="logo" />
-        <p className="subtitle">Chain to the Rim is a daily NBA Top Shot grid game that tests your basketball knowledge and on-chain instincts. Fill the grid by matching players and to Top Shot–specific criteria — block by block, all the way to the rim.</p>
+        <p className="subtitle"><strong>Chain to the Rim</strong> is a daily NBA Top Shot grid game that tests your basketball knowledge and on-chain instincts. Fill the grid by matching players and Top Shot–specific criteria — block by block, all the way to the rim.</p>
         <p className="api-badge">🔌 Powered by API ({allPlayers.length} players)</p>
       </header>
 
