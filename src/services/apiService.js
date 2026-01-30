@@ -1,6 +1,10 @@
 // API service for communicating with backend
 
-const API_BASE_URL = 'http://localhost:3001/api'
+// Auto-detect API URL based on environment
+const API_BASE_URL = import.meta.env.VITE_API_URL ||
+  (typeof window !== 'undefined' && window.location.origin.includes('vercel.app')
+    ? `${window.location.origin}/api`
+    : 'http://localhost:3001/api')
 
 class APIError extends Error {
   constructor(message, status) {
