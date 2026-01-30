@@ -230,32 +230,37 @@ function App() {
       </div>
 
       {selectedCell && !gameOver && (
-        <div className="search-container">
-          <h3>Select a player for this cell</h3>
-          <input
-            type="text"
-            className="search-input"
-            placeholder="Search for a player..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            autoFocus
-          />
-          <div className="player-list">
-            {filteredPlayers.length > 0 ? (
-              filteredPlayers.slice(0, 10).map(playerName => (
-                <button
-                  key={playerName}
-                  className="player-option"
-                  onClick={() => handlePlayerSelect(playerName)}
-                >
-                  {playerName}
-                </button>
-              ))
-            ) : searchTerm ? (
-              <div className="no-results">No players found</div>
-            ) : (
-              <div className="hint-text">Start typing to search players...</div>
-            )}
+        <div className="search-overlay" onClick={() => { setSelectedCell(null); setSearchTerm(''); }}>
+          <div className="search-compact" onClick={(e) => e.stopPropagation()}>
+            <div className="search-header">
+              <h3>Select Player</h3>
+              <button className="search-close" onClick={() => { setSelectedCell(null); setSearchTerm(''); }}>✕</button>
+            </div>
+            <input
+              type="text"
+              className="search-input"
+              placeholder="Type player name..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              autoFocus
+            />
+            <div className="player-list">
+              {filteredPlayers.length > 0 ? (
+                filteredPlayers.slice(0, 8).map(playerName => (
+                  <button
+                    key={playerName}
+                    className="player-option"
+                    onClick={() => handlePlayerSelect(playerName)}
+                  >
+                    {playerName}
+                  </button>
+                ))
+              ) : searchTerm ? (
+                <div className="no-results">No players found</div>
+              ) : (
+                <div className="hint-text">Start typing...</div>
+              )}
+            </div>
           </div>
         </div>
       )}
