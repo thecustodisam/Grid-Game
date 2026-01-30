@@ -385,3 +385,39 @@ But let's try to fix Vercel first - it should work!
 **Coffee consumed:** Hopefully a lot ☕
 
 **Tomorrow's mantra:** "Check the logs first, debug second, revert third!" 🎯
+
+---
+
+## 🔄 UPDATE: End of Night Revert
+
+**Time:** Late evening
+**Action taken:** Removed broken API entirely, deployed frontend only
+
+### Current State After Revert
+- ✅ Frontend deploys successfully
+- ❌ API removed completely (no api/ directory)
+- ⚠️ Game will load but won't function (no data)
+
+### Why This Was Necessary
+Even after reverting to old working code (commit 01998a3), the API still failed. This confirms the Vercel project itself is in a corrupted state, not just our code.
+
+### What This Means for Tomorrow
+The game homepage will load, but:
+- Grid will show "TEAM" placeholders (no API to load data)
+- Can't play games (API needed)
+- No leaderboard (API needed)
+
+### Next Steps Tomorrow
+1. **FIRST:** Check Vercel dashboard for the actual error
+2. **IF that doesn't help:** Create a fresh Vercel project
+3. **Alternative:** Run backend with server.js on a VPS or Heroku
+
+The frontend works, we just need to get the backend running somewhere!
+
+---
+
+**Final commit:** `3c06f07 Remove broken API, deploy frontend only`
+**Status:** Frontend-only deployment
+**Ready for:** Fresh start tomorrow with insights from Vercel logs
+
+Good night! 🌙
