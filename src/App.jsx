@@ -78,7 +78,7 @@ function App() {
     <div className="app">
       <header className="header">
         <img src="/chaintotherim2.png" alt="Chain to the Rim" className="logo" />
-        <p className="subtitle">Chain to the Rim challenges NBA Top Shot collectors to think deeper. Use your knowledge of moments, sets, serials, and badges to complete the daily grid and prove your game is truly on-chain.</p>
+        <p className="subtitle">Chain to the Rim is a daily NBA Top Shot grid game that tests your basketball knowledge and on-chain instincts. Fill the grid by matching players and to Top Shot–specific criteria — block by block, all the way to the rim.</p>
       </header>
 
       <div className="game-stats">
