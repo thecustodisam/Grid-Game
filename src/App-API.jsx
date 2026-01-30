@@ -154,7 +154,7 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>Chain to the Rim</h1>
+        <img src="/images/chaintotherim2.png" alt="Chain to the Rim" className="logo" />
         <p className="subtitle">Chain to the Rim challenges NBA Top Shot collectors to think deeper. Use your knowledge of moments, sets, serials, and badges to complete the daily grid and prove your game is truly on-chain.</p>
         <p className="api-badge">🔌 Powered by API ({allPlayers.length} players)</p>
       </header>

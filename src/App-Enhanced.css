@@ -1,5 +1,14 @@
 /* Enhanced App Styles - Milestone 3 */
 
+/* Logo styling */
+.header .logo {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
